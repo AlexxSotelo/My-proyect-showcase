@@ -90,6 +90,8 @@ span{
 /*Navegation configuration*/
 .navegation-bg{
     background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
 }
 
 .navegation{
@@ -99,6 +101,7 @@ span{
 
 .nav-el{
     display: flex;
+    justify-content: center;
     align-items: center;
     list-style-type: none;
     padding-right: 2rem;
@@ -118,4 +121,75 @@ span{
 
 .nav-el a:hover{
     color: #00ffff;
+}
+
+.open-menu,
+.close-menu{
+    display: none;
+}
+
+@media screen and (max-width: 550px){
+    /*Adjust de image and the text*/
+    .container{
+        flex-direction: column;
+        align-items: stretch; 
+    }
+    /*Adjust the background*/
+    .background{
+        height: 850px;
+    }
+    /*Menu configuration*/
+    .open-menu,
+    .close-menu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--white);
+    }
+
+    .close-menu{
+        border-radius: 50%;
+    }
+
+    .open-menu:hover{
+        color:aquamarine;
+    }
+
+    .close-menu:hover{
+        background-color: var(--cyan);
+        padding: .5rem;
+    }
+
+    .navegation{
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #393d42;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .navegation.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-el{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-el a:hover{
+        color: var(--cyan);
+    }
 }

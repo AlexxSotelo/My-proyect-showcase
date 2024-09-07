@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexander Freelancer</title>
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--I add the icon in the browser-->
     <link rel="shortcut icon" href="/Images/Shortcut/Browser_Shortcut.ico" />
     <!--I charge the Robotto font-->
@@ -24,12 +26,13 @@
 <body>
     <!--Navegation configuration-->
     <div class="navegation-bg">
-        <nav class="navegation">
-            <div class="corner">
-                <img src="/Images/Logo/Personal_Logo.png" alt="Personal Logo" class="logo"/>
-                <p>Alexander Sotelo</p>
-            </div>
-
+        <div class="corner">
+            <img src="/Images/Logo/Personal_Logo.png" alt="Personal Logo" class="logo"/>
+            <p>Alexander Sotelo</p>
+        </div>
+        <button id="open" class="open-menu"><i class="bi bi-list"></i></button>
+        <nav class="navegation" id="nav">
+            <button id="close" class="close-menu"><i class="bi bi-x-lg"></i></button>
             <ul class="nav-el">
                 <il><a href="#">About Me</a></il>
                 <li><a href="#">Services</a></li>
