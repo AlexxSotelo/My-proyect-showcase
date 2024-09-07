@@ -1,0 +1,37 @@
+:root{
+    --cyan:#4BF0FC;
+    --fuxia:#FF1493;
+    --purple:#8968cd;
+    --black:#212121;
+    --white:#FFFFFF;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;   /*Hack para box model*/
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    font-size: 16px; /* 16px */
+    font-family: "Cabin", sans-serif;
+}
+
+span{
+    font-size: 15px;
+    font-family: "Roboto Slab", serif;
+}
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.alex{
+    border-radius: 50%;
+    width: 270px;
+    height: 270px;
+}
