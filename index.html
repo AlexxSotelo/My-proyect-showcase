@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexander Freelancer</title>
     <!--I add the icon in the browser-->
-    <link rel="shortcut icon" href="/Images/LOGO-PERSONAL.ico" />
+    <link rel="shortcut icon" href="/Images/Shortcut/Browser_Shortcut.ico" />
     <!--I charge the Robotto font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +18,47 @@
     <!--I preload the styles sheet-->
     <link rel='preload' href="/CSS/style.css" as="style"/>
     <link rel="stylesheet" href="/CSS/style.css"/>
+     <!-- Vincular el archivo JavaScript -->
+     <script src="/script.js" defer></script>
 </head>
 <body>
-    <!--Image from the beginning-->
-    <img src="Images/business_image.jpg" alt="Alexander's picture" class="alex"/>
-  
-    <!--Presentation title-->
-    <header class="presentation">
-        <h1><span>Hi, I am Alexander!</span><br>Data Analysis and Web Development</h1>
-    </header>
+    <!--Navegation configuration-->
+    <div class="navegation-bg">
+        <nav class="navegation">
+            <div class="corner">
+                <img src="/Images/Logo/Personal_Logo.png" alt="Personal Logo" class="logo"/>
+                <p>Alexander Sotelo</p>
+            </div>
 
-    <div class="descript">
-        <p>Explore my portfolio to see how I transform data into insights, and ideas into responsive, functional websites!.</p>
-        <bottom>About Me</bottom>
-    <div/>
+            <ul class="nav-el">
+                <il><a href="#">About Me</a></il>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="background">
+
+        <div class="container">
+            <!--Image from the beginning-->
+            <img src="Images/business_image.jpg" alt="Alexander's picture" class="alex"/>
+            <!--Presentation title-->
+            <header class="presentation">
+                <h1><span>Hi, I am <span class="azul">Alexander</span>!</span><br>Data Analysis and Web Development</h1>
+            </header>
+        </div>
+
+        <div class="descript">
+            <p class="text"></p><br><br>
+            <bottom class="boton">About Me</bottom>
+        <div/>
+
+    </main>
+    
+    
+
+    
     
 </body>
 </html>

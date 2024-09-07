@@ -5,7 +5,7 @@
     --black:#212121;
     --white:#FFFFFF;
 }
-
+/*Global configuration*/
 html{
     font-size: 62.5%;
     box-sizing: border-box;   /*Hack para box model*/
@@ -13,25 +13,109 @@ html{
 }
 
 body{
-    font-size: 16px; /* 16px */
+    font-size: 20px; /* 16px */
     font-family: "Cabin", sans-serif;
+    color: var(--white);
 }
 
 span{
-    font-size: 15px;
+    font-size: 29px;
     font-family: "Roboto Slab", serif;
 }
 
+.azul{
+    color: var(--cyan);
+}
+
+/*portada*/
 .container{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.alex{
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+}
+
+.descript{
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.boton{
+    background-color: var(--fuxia);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+.boton:hover{
+    background-color: var(--purple);
+}
+
+.background{
+    background-image: url('/Images/Background/fondo_estrellas_primer_1.gif');
+    background-position: center;
+    background-size: cover;
+    height: 550px;
+    background-repeat: no-repeat;
+}
+/*Navegation corner*/
+.corner{
+    display: flex;
+    justify-content: right;
     align-items: center;
     gap: 20px;
     padding: 20px;
 }
 
-.alex{
+.logo{
     border-radius: 50%;
-    width: 270px;
-    height: 270px;
+    width: 50px;
+    height: 50px;
+}
+
+/*Navegation configuration*/
+.navegation-bg{
+    background-color: var(--black);
+}
+
+.navegation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-el{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-right: 2rem;
+}
+
+.nav-el a{
+    display: block;
+    text-align: center;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+
+
+.nav-el a:hover{
+    color: #00ffff;
 }
