@@ -23,8 +23,25 @@ span{
     font-family: "Roboto Slab", serif;
 }
 
+footer{
+    background-color: #000000;
+    padding: 2rem;
+}
+
+footer a{
+    color: var(--white);
+    margin-left: 1rem; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover{
+    color: #afb1b3;
+}
+
 .azul{
     color: var(--cyan);
+    text-shadow: 0 0 35px var(--cyan);
 }
 
 /*portada*/
@@ -62,14 +79,17 @@ span{
 }
 
 .boton:hover{
-    background-color: var(--purple);
+    background-color: var(--fuxia);
+    letter-spacing: 0.03em;
+    Box-shadow: 0 0 35px var(--fuxia);
+
 }
 
 .background{
     background-image: url('/Images/Background/fondo_estrellas_primer_1.gif');
     background-position: center;
     background-size: cover;
-    height: 550px;
+    height: 540px;
     background-repeat: no-repeat;
 }
 /*Navegation corner*/
@@ -117,10 +137,10 @@ span{
     padding: 1rem;
 }
 
-
-
 .nav-el a:hover{
+    letter-spacing: 0.04em;
     color: #00ffff;
+    text-shadow: 0 0 35px var(--cyan);
 }
 
 .open-menu,
@@ -136,7 +156,7 @@ span{
     }
     /*Adjust the background*/
     .background{
-        height: 850px;
+        height: 770px;
     }
     /*Menu configuration*/
     .open-menu,
@@ -147,19 +167,29 @@ span{
         background-color: transparent;
         cursor: pointer;
         color: var(--white);
+        margin-right: 10px;
+    }
+
+    .open-menu{
+        font-size: 3rem;
     }
 
     .close-menu{
+        font-size: 2.3rem;
         border-radius: 50%;
     }
 
     .open-menu:hover{
         color:aquamarine;
+        letter-spacing: 0.1em;
+        text-shadow: 0 0 35px var(--cyan);
     }
 
     .close-menu:hover{
         background-color: var(--cyan);
         padding: .5rem;
+        letter-spacing: 0.1em;
+        text-shadow: 0 0 35px var(--cyan);
     }
 
     .navegation{
@@ -191,5 +221,88 @@ span{
 
     .nav-el a:hover{
         color: var(--cyan);
+        letter-spacing: 0.03em;
+        text-shadow: 0 0 35px var(--cyan);
+    }
+}
+
+
+/*Footer configuration*/
+.footer{
+    background-color: #000000;
+    padding-bottom: 9rem;
+}
+
+.last-part{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30rem;
+}
+
+.last-part .des {
+    text-align: justify;
+    padding-left: 7rem;
+}
+
+.last-part .socials {
+    text-align: left;
+}
+
+
+.last-part .socials .links a{
+    display: inline-block; /* Para asegurarnos de que el enlace se comporte como un bloque */
+    border: 2px solid #ffffff; /* Borde blanco */
+    border-radius: 50%; /* Hace el borde circular */
+    text-align: center; /* Centra el texto dentro del círculo */
+    width: 29px; /* Ancho del enlace */
+    height: 29px; /* Alto del enlace */
+    line-height: 30px; /* Alinea el texto verticalmente */
+    color: #ffffff; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    transition: background-color 0.3s ease; /* Transición para cambios en hover */
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.last-part .socials .links a:hover{
+    letter-spacing: 0.1em;
+    border-spacing: 0.1em;
+    color: #00ffff;
+    border-color: var(--cyan);
+    box-shadow: 0 0 35px var(--cyan);
+}
+
+.line-divider {
+    border-top: .5px solid #ffffff; /* Línea de 2px de grosor */
+    width: calc(100% - 60px); /* Reduce 30px de cada lado */
+    margin: 0 auto; /* Centra la línea */
+}
+
+@media screen and (max-width: 550px){
+    .last-part {
+        grid-template-columns: 1fr; /* Una sola columna para pantallas pequeñas */
+        column-gap: 0; /* Elimina el espacio entre las columnas */
+    }
+
+    .last-part .des,
+    .last-part .socials {
+        padding-left: 0; /* Elimina el padding en pantallas pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .last-part .socials .links {
+        display: flex; /* Usa flexbox para alinear los enlaces verticalmente */
+        flex-direction: row; /* Dispone los enlaces en columna */
+        align-items: center; /* Centra los enlaces horizontalmente */
+        justify-content: center;
+        padding: 0; /* Elimina el padding del contenedor de enlaces */
+        gap: 5rem;
+        font-size: 30px;
+    }
+
+    .last-part .socials .links a {
+        padding: 10px;
+        margin-bottom: 15px; /* Añade un margen inferior entre los enlaces */
+        margin-right: 0; /* Elimina el margen derecho */
     }
 }
